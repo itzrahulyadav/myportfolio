@@ -9,10 +9,6 @@ const Header = () => {
                     <a  className = "hover:text-pink-200 text-base sm:text-xl sm:hover:text-2xl" href="#">About</a>
                     <a  className = "hover:text-pink-200 text-base sm:text-xl sm:hover:text-2xl" href="#">Projects</a>
                     <a  className = "hover:text-pink-200 text-base sm:text-xl sm:hover:text-2xl" href="#contact">Contact</a>
-                  
-
-
-            
             </div>
         </div>
     )

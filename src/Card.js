@@ -11,7 +11,7 @@ const Card = () => {
                 </div>
                 <div className="text-center mt-5">
                     <p className="text-xl sm:text-2xl text-black font-bold">Rahul Yadav</p>
-                    <p className="text-xs sm:text-base text-black pt-2 pb-4 px-5 m-auto inline-block ">React Developer</p>
+                    <p className="text-xs sm:text-base text-black pt-2 pb-4 px-5 m-auto inline-block ">Full stack Developer</p>
                 </div>
 
                 <Links />

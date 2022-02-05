@@ -6,7 +6,7 @@ import Links from './Links';
         <div className = "py-5" id = "contact">
           <Links />
           <div className = "flex justify-center mt-5 ">
-                <p className = "font-medium text-xl">Made with by ❤️  Rahul Yadav</p>
+                <p className = "font-medium text-xl">Crafted with by ❤️  Rahul Yadav</p>
           </div>
         </div>
         
