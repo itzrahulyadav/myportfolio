@@ -5,6 +5,7 @@ import Header from './Header';
 import Skills from './Skills';
 import Footer from './Footer';
 import Contact from './Contact';
+import CodingProfiles from './CodingProfiles';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className="min-h-screen py-10 px-5 bg-gradient-to-br from-purple-200 to-pink-200 via-cyan-200">
       <Header />
       <Card />
+      <CodingProfiles />
       <Aboutme />
       <Skills />
       <Contact />
