@@ -1,10 +1,14 @@
 import React from 'react'
 import rahul from './rahul.jpg'
 import Links from './Links'
+import {motion} from 'framer-motion';
 
 const Card = () => {
     return (
-        <div className="w-full">
+        <motion.div className="w-full"
+            initial={{ y: '-100vh' }}
+            animate={{ y: 0 }}
+            transition={{ type: 'spring', duration: 1, bounce: 0.3 }}>
             <div className="flex flex-col justify-center mx-auto bg-white/50 drop-shadow-xl shadow-xl rounded-xl p-5 backdrop-blur-lg">
                 <div>
                     <img className="w-32 mx-auto shadow-xl rounded-full drop-shadow-sm hover:scale-75 hover:rotate-6 transition-transform -rotate-6" alt="profile photo" src={rahul} />
@@ -17,7 +21,7 @@ const Card = () => {
                 <Links />
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

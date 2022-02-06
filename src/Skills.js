@@ -1,11 +1,38 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { FaReact } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiRedux, SiHtml5, SiPython, SiTypescript} from 'react-icons/si';
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { useAnimation } from 'framer-motion';
+
 
 
 const Skills = () => {
+   
+    const { ref, inView } = useInView({
+        threshold: 0.2
+    });
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 1, bounce: 0.3,opacity:1
+                }
+            })
+        }
+        if (!inView) {
+            animation.start({ x: '-20vw',opacity:1 })
+        }
+    }, [inView]);
+
+
+
+
     return (
-        <div className="max-w-4xl mx-auto justify-center py-12 " id="tech">
+        <motion.div ref = {ref} className="max-w-4xl mx-auto justify-center py-12 " id="tech" animate = {animation}>
             <p className="text-2xl text-black text-center sm:text-4xl pt-4 font-bold">
                 Tech I use
             </p>
@@ -41,7 +68,7 @@ const Skills = () => {
 
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 
