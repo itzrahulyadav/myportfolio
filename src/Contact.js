@@ -7,7 +7,6 @@ import {useAnimation} from 'framer-motion';
 
 const Contact = () => {
     const {ref,inView} = useInView({
-        threshold:0.1
     });
     const animation = useAnimation();
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import rahul from './rahul.jpg'
+import rahul from './rahul2.jpg'
 import Links from './Links'
 import {motion} from 'framer-motion';
 

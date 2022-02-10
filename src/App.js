@@ -1,23 +1,23 @@
 import './App.css';
-import Card from './Card';
-import Aboutme from './Aboutme';
 import Header from './Header';
-import Skills from './Skills';
-import Footer from './Footer';
-import Contact from './Contact';
 import CodingProfiles from './CodingProfiles';
-
+import { Route, Routes } from 'react-router-dom';
+import Main from './Main';
+import Info from './Info';
+import Projects from './Projects';
 
 function App() {
   return (
     <div className="min-h-screen py-10 px-5 bg-gradient-to-br from-purple-200 to-pink-200 via-cyan-200">
       <Header />
-      <Card />
-      <CodingProfiles />
-      <Aboutme />
-      <Skills />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path = "/" element = {<Main />} />
+        <Route path = "/CodingProfiles" element = {<CodingProfiles />} />
+        <Route path = "/contact" element = {<Info />} />
+        <Route path = "/projects" element = {<Projects />} />
+
+      </Routes>
+     
     </div>
   );
 }
