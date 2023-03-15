@@ -26,6 +26,6 @@ phases:
 
 
 artifacts:
-files:
-  - 'build/*'
-name: demo-portfolioartifact
+  files:
+    - 'build/*'
+  name: demo-portfolioartifact
