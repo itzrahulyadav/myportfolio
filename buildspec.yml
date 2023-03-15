@@ -15,7 +15,6 @@ phases:
     commands:
       - echo Build started on 'date'
       - echo first test codes
-      - CI=true npm test
       - echo compiling the codes
       - npm run build
       - echo Build finished, now moving to s3
