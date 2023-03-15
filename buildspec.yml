@@ -23,3 +23,9 @@ phases:
     commands:
       - echo Build completed on 'date'
       - aws s3 sync build/ s3://rahul-demo-site --acl public-read
+
+
+artifacts:
+files:
+  - 'build/*'
+name: demo-portfolioartifact
