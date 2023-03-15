@@ -1,0 +1,26 @@
+version: 0.1
+
+phases:
+  install:
+    runtime-version:
+      nodejs: 10
+    commands:
+      - echo Getting Started
+  pre_build:
+    commands:
+    - echo Installing source NPM dependencies
+    - npm install
+    - aws --version
+  build:
+    commands:
+      - echo Build started on 'date'
+      - echo first test codes
+      - CI=true npm test
+      - echo compiling the codes
+      - npm run build
+      - echo Build finished, now moving to s3
+
+  post_build:
+    commands:
+      - echo Build completed on 'date'
+      - aws s3 sync build/ s3://rahul-demo-site -acl public-read
