@@ -7,7 +7,8 @@ phases:
       - echo "install phase....."
   pre_build:
     commands:
-      - docker --version
+      - |
+          nohup /usr/local/bin/dockerd — host=unix:///var/run/docker.sock — host=tcp://127.0.0.1:2375 — storage- driver=overlay2&- timeout 15 sh -c “until docker info; do echo .; sleep 1; done”
       - docker pull owasp/zap2docker-stable
       - docker run -t owasp/zap2docker-stable zap-baseline.py -t https://portfolio-2-957a-2wn1ew8sx-itzrahulyadav.vercel.app/?fbclid=PAAab9d7rb-ajXE8IRZOexVOg0I4wvMo-JnmYbDGgDkL2uAZkfEi1XjA7l2Ew  
   build:
