@@ -9,7 +9,7 @@ phases:
     commands:
       - docker --version
       - docker pull owasp/zap2docker-stable
-      - docker run -t owasp/zap2docker-stable zap-baseline.py -t http://itzrahulyadav.s3-website.ap-south-1.amazonaws.com  
+      - docker run -t owasp/zap2docker-stable zap-baseline.py -t https://portfolio-2-957a-2wn1ew8sx-itzrahulyadav.vercel.app/?fbclid=PAAab9d7rb-ajXE8IRZOexVOg0I4wvMo-JnmYbDGgDkL2uAZkfEi1XjA7l2Ew  
   build:
     commands: 
       - echo "build finished"
