@@ -9,7 +9,7 @@ phases:
     commands:
       - docker --version
       - docker pull owasp/zap2docker-stable
-      - docker run -t owasp/zap2docker-stable zap-baseline.py \ -t http://rahul-demo-site.s3-website.ap-south-1.amazonaws.com  
+      - docker run -t owasp/zap2docker-stable zap-baseline.py \ -t http://itzrahulyadav.s3-website.ap-south-1.amazonaws.com  
   build:
     commands: 
       - echo "build finished"
